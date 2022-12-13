@@ -1,0 +1,32 @@
+body{
+    background-color: #f5f7fd;
+  }
+.navbar{
+    width: 100%;
+    height: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #f5f7fd;
+
+
+}
+
+.active{
+
+    color: teal;
+    text-decoration: none;
+
+}
+
+.unactive{
+
+    color: #232040;
+    text-decoration: none;
+
+}
+
+.unactive:hover{
+    color: teal;
+}
