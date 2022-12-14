@@ -9,10 +9,13 @@ import {
   CardBody,
   VStack,
 } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Api from "../api/Api";
 import Footer from "../components/Footer";
 import Layout1 from "../components/Home-page-extra/Layout1";
 import Layout10 from "../components/Home-page-extra/Layout10";
+import Layout11 from "../components/Home-page-extra/Layout11";
 import Layout2 from "../components/Home-page-extra/Layout2";
 import Layout3 from "../components/Home-page-extra/Layout3";
 import Layout4 from "../components/Home-page-extra/Layout4";
@@ -21,11 +24,17 @@ import Layout6 from "../components/Home-page-extra/Layout6";
 import Layout7 from "../components/Home-page-extra/Layout7";
 import Layout8 from "../components/Home-page-extra/Layout8";
 import Layout9 from "../components/Home-page-extra/Layout9";
+import RatingBar from "../components/Home-page-extra/RatingBar";
 import Icon from "../components/Icon";
+import ProductCard from "../components/ProductCard";
+import ProductSlider from "../components/ProductSlider";
 import "./styles.css";
 export default function HomePage() {
+
   return (
     <Box className="container">
+      {/* <ProductCard image={"https://img.shop.com/Image/240000/243300/243380/products/1942133519.jpg?plain&size=600x600"} name="Motives® X Amber Essential Collection" price={80.00} delivery=" 1.60 / 2%" rating={5}/> */}
+
       <Flex justify="center" align="center" gap={2} mb={8} padding={2}>
         <Text fontSize="3xl" color="gray">
           $50,009,502
@@ -161,7 +170,9 @@ export default function HomePage() {
       <Layout4/>
       <Layout5 />
 
-      {/* left slider NEW Layered Holiday Collection */}
+      <Text align="left" m="32px"padding="0px 8px" mb="0px" bg="white" mt="50px" fontSize="4xl">NEW Layered Holiday Collection</Text>
+      
+      <Layout11 />
 
       <Layout6 />
 
@@ -180,6 +191,8 @@ export default function HomePage() {
 
       <Text align="center" m="32px" mb="0px" bg="white" mt="50px" fontSize="4xl">Our Brands</Text>
       <Layout10 />
+
+
 
       <Footer />
     </Box>
