@@ -17,7 +17,7 @@ export default function Layout11(){
    const perform=async()=>{
     let api = new Api()
     
-  setd1(await api.getData(process.env.REACT_APP_JWELERY))
+  setd1(await api.getProductsData(process.env.REACT_APP_JWELERY))
    }
    perform()
   },[])

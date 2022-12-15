@@ -1,68 +1,139 @@
 {
   "users": [
     {
-      "id": 1,
-      "email": "json-server",
-      "password": "typicode"
+      "name": "Saurabh kumar",
+      "email": "sau4478@gmail.con",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "name": "Saurabh kumar",
+      "email": "sau4478@gmail.con",
+      "password": "123k",
+      "id": 2
+    },
+    {
+      "name": "Saurabh kumar",
+      "email": "sau4478@gmail.con",
+      "password": "Saurabh@5740",
+      "id": 3
+    },
+    {
+      "name": "Saurabh kumar",
+      "email": "sau4478@gmail.con",
+      "password": "Saurabh@5740",
+      "id": 4
+    },
+    {
+      "name": "Saurabh kumar",
+      "email": "sau4478@gmail.con",
+      "password": "Saurabh@5740",
+      "id": 5
+    },
+    {
+      "name": "Saurabh kumar",
+      "email": "sau4478@gmail.con",
+      "password": "Saurabh@5740",
+      "id": 6
+    },
+    {
+      "name": "Saurabh kumar",
+      "email": "sau4478@gmail.con",
+      "password": "Saurabh@5740",
+      "id": 7
+    },
+    {
+      "name": "Saurabh",
+      "email": "ankit@5740.com",
+      "password": "Saurabh@5740",
+      "id": 8
     }
   ],
-  "products":[
-
+  "products": [
     {
-      "id":"jwelery",
-      "items":[{"id":1,
-      "image":"https://img.shop.com/Image/280000/282000/282022/products/1954593819.jpg?plain&size=600x600",
-      "price":80.00,
-      "delivery":"+0.99 /2 %",
-      "name":"GABRIELLA - Simulated Diamond Tennis Necklace",
-      "ratings":4},{"id":2,
-      "image":"https://img.shop.com/Image/280000/282000/282022/products/1954593895.jpg?plain&size=600x600",
-      "price":90.99,
-      "delivery":"+0.99 /2 %",
-      "name":"CANDICE - Simulated Diamond Tennis Necklace",
-      "ratings":5},{"id":3,
-      "image":"https://img.shop.com/Image/280000/282000/282022/products/1954593896.jpg?plain&size=600x600",
-      "price":95.99,
-      "delivery":"+0.99 /2 %",
-      "name":"EVA – Convertible Link Drop Earrings",
-      "ratings":3},{"id":4,
-      "image":"https://img.shop.com/Image/280000/282000/282022/products/1954593897.jpg?plain&size=600x600",
-      "price":88.99,
-      "delivery":"+0.99 /2 %",
-      "name":"SASHA – Double Stud Set",
-      "ratings":5},{"id":5,
-      "image":"https://img.shop.com/Image/280000/282000/282022/products/1954593919.jpg?plain&size=600x600",
-      "price":49.99,
-      "delivery":"+0.99 /2 %",
-      "name":"LORENA – Dual Stud Chain Earrings",
-      "ratings":3},{"id":6,
-      "image":"https://img.shop.com/Image/280000/282000/282022/products/1954593818.jpg?plain&size=600x600",
-      "price":70.99,
-      "delivery":"+0.99 /2 %",
-      "name":"CANDICE - Simulated Diamond Tennis Bracelet",
-      "ratings":2},{"id":7,
-      "image":"https://img.shop.com/Image/280000/282000/282022/products/1954593899.jpg?plain&size=600x600",
-      "price":69.99,
-      "delivery":"+0.99 /2 %",
-      "name":"GABRIELLA - Simulated Diamond Tennis Bracelet",
-      "ratings":4},{"id":8,
-      "image":"https://img.shop.com/Image/280000/282000/282022/products/1954593918.jpg?plain&size=600x600",
-      "price":50.00,
-      "delivery":"+0.99 /2 %",
-      "name":"GENEVIEVE - Dual Stone Ring",
-      "ratings":4},{"id":9,
-      "image":"https://img.shop.com/Image/280000/282000/282022/products/1955444694.jpg?plain&size=600x600",
-      "price":100,
-      "delivery":"+0.99 /2 %",
-      "name":"JORDAN - Triple Stone Ring",
-      "ratings":5},{"id":10,
-      "image":"https://img.shop.com/Image/280000/282000/282022/products/1954593898.jpg?plain&size=600x600",
-      "price":101,
-      "delivery":"+0.99 /2 %",
-      "name":"WINNIE - Sleek Ring Trio",
-      "ratings":4}]
-
+      "id": "jwelery",
+      "items": [
+        {
+          "id": 1,
+          "image": "https://img.shop.com/Image/280000/282000/282022/products/1954593819.jpg?plain&size=600x600",
+          "price": 80,
+          "delivery": "+0.99 /2 %",
+          "name": "GABRIELLA - Simulated Diamond Tennis Necklace",
+          "ratings": 4
+        },
+        {
+          "id": 2,
+          "image": "https://img.shop.com/Image/280000/282000/282022/products/1954593895.jpg?plain&size=600x600",
+          "price": 90.99,
+          "delivery": "+0.99 /2 %",
+          "name": "CANDICE - Simulated Diamond Tennis Necklace",
+          "ratings": 5
+        },
+        {
+          "id": 3,
+          "image": "https://img.shop.com/Image/280000/282000/282022/products/1954593896.jpg?plain&size=600x600",
+          "price": 95.99,
+          "delivery": "+0.99 /2 %",
+          "name": "EVA – Convertible Link Drop Earrings",
+          "ratings": 3
+        },
+        {
+          "id": 4,
+          "image": "https://img.shop.com/Image/280000/282000/282022/products/1954593897.jpg?plain&size=600x600",
+          "price": 88.99,
+          "delivery": "+0.99 /2 %",
+          "name": "SASHA – Double Stud Set",
+          "ratings": 5
+        },
+        {
+          "id": 5,
+          "image": "https://img.shop.com/Image/280000/282000/282022/products/1954593919.jpg?plain&size=600x600",
+          "price": 49.99,
+          "delivery": "+0.99 /2 %",
+          "name": "LORENA – Dual Stud Chain Earrings",
+          "ratings": 3
+        },
+        {
+          "id": 6,
+          "image": "https://img.shop.com/Image/280000/282000/282022/products/1954593818.jpg?plain&size=600x600",
+          "price": 70.99,
+          "delivery": "+0.99 /2 %",
+          "name": "CANDICE - Simulated Diamond Tennis Bracelet",
+          "ratings": 2
+        },
+        {
+          "id": 7,
+          "image": "https://img.shop.com/Image/280000/282000/282022/products/1954593899.jpg?plain&size=600x600",
+          "price": 69.99,
+          "delivery": "+0.99 /2 %",
+          "name": "GABRIELLA - Simulated Diamond Tennis Bracelet",
+          "ratings": 4
+        },
+        {
+          "id": 8,
+          "image": "https://img.shop.com/Image/280000/282000/282022/products/1954593918.jpg?plain&size=600x600",
+          "price": 50,
+          "delivery": "+0.99 /2 %",
+          "name": "GENEVIEVE - Dual Stone Ring",
+          "ratings": 4
+        },
+        {
+          "id": 9,
+          "image": "https://img.shop.com/Image/280000/282000/282022/products/1955444694.jpg?plain&size=600x600",
+          "price": 100,
+          "delivery": "+0.99 /2 %",
+          "name": "JORDAN - Triple Stone Ring",
+          "ratings": 5
+        },
+        {
+          "id": 10,
+          "image": "https://img.shop.com/Image/280000/282000/282022/products/1954593898.jpg?plain&size=600x600",
+          "price": 101,
+          "delivery": "+0.99 /2 %",
+          "name": "WINNIE - Sleek Ring Trio",
+          "ratings": 4
+        }
+      ]
     }
-
   ]
 }
