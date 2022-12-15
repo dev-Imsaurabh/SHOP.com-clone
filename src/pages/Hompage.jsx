@@ -9,7 +9,7 @@ import {
   CardBody,
   VStack,
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Api from "../api/Api";
 import Footer from "../components/Footer";
@@ -28,7 +28,10 @@ import RatingBar from "../components/Home-page-extra/RatingBar";
 import Icon from "../components/Icon";
 import ProductCard from "../components/ProductCard";
 import ProductSlider from "../components/ProductSlider";
+import { AuthContext } from "../contexts/AuthContext";
 import "./styles.css";
+
+
 export default function HomePage() {
 
   return (
