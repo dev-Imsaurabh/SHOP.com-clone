@@ -194,7 +194,7 @@ export default function HomePage() {
 
 
 
-      <Footer />
+     
     </Box>
   );
 }

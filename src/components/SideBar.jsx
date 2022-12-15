@@ -6,14 +6,44 @@ import {
     DrawerOverlay,
     DrawerContent,
     Button,
+    Image,
     DrawerCloseButton,
-    useDisclosure,Input
+    useDisclosure,Input, Text
+    
   } from '@chakra-ui/react'
 import React from 'react'
+import "./cstyles.css"
+import { useNavigate } from 'react-router-dom'
+import logo from "../assets/logo.svg"
+import SideBarOp from './Home-page-extra/SideBarOp'
 import Icon from './Icon'
   
 export default function SideBar(){
+  let nav = useNavigate()
+  const allCat =['Gift Center',
+  'SHOP.COM Home Warranties',
+  'Onecart Exclusive Deals',
+  'Clothes',
+  'Shoes',
+  'Beauty',
+  'Home',
+  'Electronics',
+  'Health & Nutrition',
+  'Jewelry',
+  'Kids',
+  'Pet Supplies',
+  'Food & Drink',
+  'Sports',
+  'Travel',
+  'SHOP Travel',
+  'All Stores',
+  'Exclusive Brands']
 
+  let options=allCat.map((el)=>{
+
+    return <SideBarOp key={el} name={el} />
+
+  })
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
     return <>
@@ -45,11 +75,17 @@ export default function SideBar(){
         >
           <DrawerOverlay />
           <DrawerContent>
-            <DrawerCloseButton />
-            <DrawerHeader>Create your account</DrawerHeader>
+            <DrawerCloseButton  />
+            <DrawerHeader>
+            <Image _hover={{cursor:"pointer"}} onClick={()=>{
+            nav("/")
+        }} src={logo} width={120} ml={8}></Image>
+            </DrawerHeader>
   
-            <DrawerBody>
-              {/* give body */}
+            <DrawerBody className='dbody'>
+
+              <Text fontSize="medium" fontWeight="bold">Categories</Text>
+              {options}
             </DrawerBody>
   
             <DrawerFooter>
