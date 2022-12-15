@@ -1,8 +1,10 @@
 import { Button, Flex } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import Icon from "./Icon";
 
 
 export default function NavControlPanel(){
+  const nav = useNavigate()
 
     return <Flex align="center"  justify="end">
  <Button
@@ -20,6 +22,9 @@ export default function NavControlPanel(){
           }
           color="black"
           bg="#f5f7fd"
+          onClick={()=>{
+            nav("/signin")
+          }}
           border="0"
           borderColor="green.500"
         >
