@@ -7,34 +7,14 @@
       "account": {
         "cart": [
           {
-            "id": 35,
-            "name": "Tênis de Caminhada Leve Confortável",
-            "price": 179.9,
-            "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg",
-            "category": "shoes",
+            "id": 4,
+            "image": "https://img.shop.com/Image/280000/282000/282022/products/1954593897.jpg?plain&size=600x600",
+            "price": 88.99,
             "delivery": "+0.99 /2 %",
-            "ratings": 4,
-            "quantity": 1
-          },
-          {
-            "id": 35,
-            "name": "Tênis de Caminhada Leve Confortável",
-            "price": 179.9,
-            "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg",
-            "category": "shoes",
-            "delivery": "+0.99 /2 %",
-            "ratings": 4,
-            "quantity": 1
-          },
-          {
-            "id": 40,
-            "name": "Tênis de Caminhada Leve e muito Confortável Confortável",
-            "price": 179.9,
-            "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg",
-            "category": "shoes",
-            "delivery": "+0.99 /2 %",
-            "ratings": 4,
-            "quantity": 1
+            "name": "SASHA – Double Stud Set",
+            "ratings": 5,
+            "category": "jewelry",
+            "quantity": 6
           }
         ],
         "orders": []
