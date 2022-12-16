@@ -54,6 +54,22 @@ export default function SeeProductPage() {
 
        let res =await api.getData(process.env.REACT_APP_USERS+`/${token}`);
 
+       console.log("my res")
+       let flag =false
+       res.data.account.cart.forEach((el)=>{
+        if(el.id==pid){
+            flag=true
+            return
+        }
+       })
+
+       if(flag){
+        setCartBtn("Go to Cart")
+       }
+       
+
+
+
        setUser(res.data)
 
         }
@@ -79,6 +95,8 @@ export default function SeeProductPage() {
 
    
     console.log(pro)
+
+    
 
 
   return (
