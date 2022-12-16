@@ -28,5 +28,13 @@ export default class Api{
       let res = await axios(BASE_URL+endpoint)
       return res
     }
+    async patchData(data,endpoint){
+      let res = await axios(BASE_URL+endpoint,{
+        method: 'put',
+        data:data
+      })
+      return res
+
+    }
 
 }

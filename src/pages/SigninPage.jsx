@@ -12,7 +12,7 @@ import { Box ,Flex,
     Text,
     useColorModeValue,
     Spacer,} from "@chakra-ui/react";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Api from "../api/Api";
 import { AuthContext } from "../contexts/AuthContext";
@@ -30,6 +30,7 @@ const [ermsg,setErMsg]=useState("")
 let context=useContext(AuthContext)
 let {isAuth,token}=context.authState
 let {signIn,setToken}=context
+
 
 
 
@@ -75,6 +76,10 @@ const handleSigin=async()=>{
 
     }
 }
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
 
     return <Box className="container">
         <Flex justify="center" gap={10} align="center" m="auto" w="80%">

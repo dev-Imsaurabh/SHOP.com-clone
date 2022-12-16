@@ -31,8 +31,10 @@ import ProductSlider from "../components/ProductSlider";
 import { AuthContext } from "../contexts/AuthContext";
 import "./styles.css";
 
-
 export default function HomePage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Box className="container">
@@ -64,7 +66,7 @@ export default function HomePage() {
       </Flex>
 
       <Image
-      bg="white"
+        bg="white"
         w="100%"
         src="https://img.shop.com/Image/homepage/shop-gbr-102789-holiday-hot-toys-banners-1600x300-img-min1669996056936.jpg"
       ></Image>
@@ -78,41 +80,38 @@ export default function HomePage() {
       >
         <Card bg="white">
           <CardBody>
-          <Flex h="100%" direction="column" justify="space-between">
+            <Flex h="100%" direction="column" justify="space-between">
+              <Text align="left" fontSize="2xl">
+                Recently Viewed
+              </Text>
 
-            <Text align="left" fontSize="2xl">
-              Recently Viewed
-            </Text>
+              <Image
+                w="100%"
+                src="https://img.shop.com/Image/250000/251800/251872/products/1938342703.jpg?plain&size=300x300"
+              ></Image>
 
-            <Image
-              w="100%"
-              src="https://img.shop.com/Image/250000/251800/251872/products/1938342703.jpg?plain&size=300x300"
-            ></Image>
-
-            <Link to="" style={{ textDecoration: "underline" }}>
-              Browsing History
-            </Link>
+              <Link to="" style={{ textDecoration: "underline" }}>
+                Browsing History
+              </Link>
             </Flex>
           </CardBody>
         </Card>
 
         <Card bg="white">
-            
           <CardBody>
-          <Flex h="100%" direction="column" justify="space-between">
+            <Flex h="100%" direction="column" justify="space-between">
+              <Text align="left" fontSize="2xl">
+                Complimentary Shipping, Returns and Gift Packaging Available
+              </Text>
 
-            <Text align="left" fontSize="2xl">
-              Complimentary Shipping, Returns and Gift Packaging Available
-            </Text>
+              <Image
+                w="100%"
+                src="https://img.shop.com/Image/homepage/us-eng-toryburch-hp-winter-dec221669836193393.jpeg"
+              ></Image>
 
-            <Image
-              w="100%"
-              src="https://img.shop.com/Image/homepage/us-eng-toryburch-hp-winter-dec221669836193393.jpeg"
-            ></Image>
-
-            <Link to="" style={{ textDecoration: "underline" }}>
-              Shop Now
-            </Link>
+              <Link to="" style={{ textDecoration: "underline" }}>
+                Shop Now
+              </Link>
             </Flex>
           </CardBody>
         </Card>
@@ -144,37 +143,70 @@ export default function HomePage() {
           </CardBody>
         </Card>
 
-
         <div>
+          <Card bg="white">
+            <CardBody>
+              <Flex direction="column">
+                <Button
+                  bg="#202340"
+                  color="white"
+                  _hover={{ bg: "gray" }}
+                  h="50px"
+                  borderRadius="30px"
+                  colorScheme="gray"
+                >
+                  Sign in
+                </Button>
+              </Flex>
+            </CardBody>
+          </Card>
 
-        <Card bg="white">
-          <CardBody>
-            <Flex  direction="column">
-
-            <Button bg="#202340" color="white"  _hover={{bg:"gray"}} h="50px" borderRadius="30px" colorScheme='gray'>Sign in</Button>
-
-
-            </Flex>
-
-          </CardBody>
-        </Card>
-        
-        <Image mt="50px" width="95%" src="https://img.shop.com/Image/homepage/stocking-stuffers-media-300x250-img1669837197571.jpg">
-
-        </Image>
+          <Image
+            mt="50px"
+            width="95%"
+            src="https://img.shop.com/Image/homepage/stocking-stuffers-media-300x250-img1669837197571.jpg"
+          ></Image>
         </div>
       </Grid>
-      <Text align="center" m="32px" bg="white" mt="50px" mb="0px" fontSize="4xl">Popular Brand</Text>
+      <Text
+        align="center"
+        m="32px"
+        bg="white"
+        mt="50px"
+        mb="0px"
+        fontSize="4xl"
+      >
+        Popular Brand
+      </Text>
       <Layout1 />
       {/* <Image w="120px" style={{position:"absolute",zIndex:"50",left:"45%",marginTop:"-25px"}} src="https://img.shop.com/Image/resources/homepage/shop-homepage-icon.svg"></Image> */}
       <Layout2 />
       <Layout3 />
-      <Text align="center" m="32px" mb="0px" bg="white" mt="50px" fontSize="4xl">Gift Ideas</Text>
-      <Layout4/>
+      <Text
+        align="center"
+        m="32px"
+        mb="0px"
+        bg="white"
+        mt="50px"
+        fontSize="4xl"
+      >
+        Gift Ideas
+      </Text>
+      <Layout4 />
       <Layout5 />
 
-      <Text align="left" m="32px"padding="0px 8px" mb="0px" bg="white" mt="50px" fontSize="4xl">NEW Layered Holiday Collection</Text>
-      
+      <Text
+        align="left"
+        m="32px"
+        padding="0px 8px"
+        mb="0px"
+        bg="white"
+        mt="50px"
+        fontSize="4xl"
+      >
+        NEW Layered Holiday Collection
+      </Text>
+
       <Layout11 />
 
       <Layout6 />
@@ -184,7 +216,16 @@ export default function HomePage() {
       <Layout7 />
 
       {/* Lumière de Vie */}
-      <Text align="center" m="32px" mb="0px" bg="white" mt="50px" fontSize="4xl">Holiday Specials</Text>
+      <Text
+        align="center"
+        m="32px"
+        mb="0px"
+        bg="white"
+        mt="50px"
+        fontSize="4xl"
+      >
+        Holiday Specials
+      </Text>
       <Layout8 />
       <Layout9 />
 
@@ -192,12 +233,17 @@ export default function HomePage() {
 
       {/* Cleaning & Health Have Never Been More Important */}
 
-      <Text align="center" m="32px" mb="0px" bg="white" mt="50px" fontSize="4xl">Our Brands</Text>
+      <Text
+        align="center"
+        m="32px"
+        mb="0px"
+        bg="white"
+        mt="50px"
+        fontSize="4xl"
+      >
+        Our Brands
+      </Text>
       <Layout10 />
-
-
-
-     
     </Box>
   );
 }

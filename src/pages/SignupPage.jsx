@@ -15,7 +15,7 @@ import {
   useColorModeValue,
   Spacer,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Api from "../api/Api";
 import "./styles.css";
@@ -29,6 +29,7 @@ export default function SignupPage() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [cpassword, setCPassword] = useState("");
+  
 
   const handleSignUp = async() => {
     let api = new Api();
@@ -71,7 +72,11 @@ export default function SignupPage() {
         let data={
             name:name,
             email:email,
-            password:password
+            password:password,
+            account:{
+              cart:[],
+              orders:[]
+            }
         }
         
        let res = await api.setData(data,process.env.REACT_APP_USERS)
@@ -91,6 +96,10 @@ export default function SignupPage() {
     setError(false)
     setErMsg("")
   }
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 
   return (
     <Box className="container">
