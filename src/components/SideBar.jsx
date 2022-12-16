@@ -20,16 +20,19 @@ import Icon from './Icon'
   
 export default function SideBar(){
   let nav = useNavigate()
-  const allCat =['Gift Center',
-  'SHOP.COM Home Warranties',
-  'Onecart Exclusive Deals',
-  'Clothes',
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = React.useRef()
+  const allCat =[
   'Shoes',
+  'Jewelry',
+  'Clothes',
   'Beauty',
   'Home',
   'Electronics',
   'Health & Nutrition',
-  'Jewelry',
+  'Gift Center',
+  'SHOP.COM Home Warranties',
+  'Onecart Exclusive Deals',
   'Kids',
   'Pet Supplies',
   'Food & Drink',
@@ -41,11 +44,10 @@ export default function SideBar(){
 
   let options=allCat.map((el)=>{
 
-    return <SideBarOp key={el} name={el} />
+    return <SideBarOp key={el} name={el} close={onClose} />
 
   })
-    const { isOpen, onOpen, onClose } = useDisclosure()
-    const btnRef = React.useRef()
+  
     return <>
         <Button
         ref={btnRef}

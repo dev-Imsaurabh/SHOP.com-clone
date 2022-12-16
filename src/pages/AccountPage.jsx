@@ -9,7 +9,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { useContext } from "react";
+import { useContext ,useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import Icon from "../components/Icon";
 import { AuthContext } from "../contexts/AuthContext";
@@ -75,6 +75,10 @@ let context = useContext(AuthContext)
     "SHOP Local",
     "Shopping Advisor",
   ];
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 
   return (
     <Box width="100%" className="container">
