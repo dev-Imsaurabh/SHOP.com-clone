@@ -4,6 +4,7 @@ import PrivateRouter from "../contexts/PrivateRouter";
 import AccountPage from "./AccountPage";
 import AllProductsPage from "./AllProductsPage";
 import CartPage from "./CartPage";
+import CheckoutPage from "./CheckoutPage";
 import HomePage from "./Hompage";
 import OrdersPage from "./OrdersPage";
 import SeeProductPage from "./SeeProductPage";
@@ -26,6 +27,7 @@ export default function AllRoutes(){
         <Route path="/orders" element={<PrivateRouter><OrdersPage /></PrivateRouter>}></Route>
         <Route path="/products/:id" element={<AllProductsPage />}></Route>
         <Route path="/:id/:pid" element={<SeeProductPage />}></Route>
+        <Route path="/checkout" element={<CheckoutPage />}></Route>
 
     </Routes>
 
