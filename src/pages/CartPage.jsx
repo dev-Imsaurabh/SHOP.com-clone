@@ -1,4 +1,4 @@
-import { Box, HStack, Spacer, Card,CardBody,VStack } from "@chakra-ui/react";
+import { Box, HStack, Spacer, Input,Card,CardBody,VStack } from "@chakra-ui/react";
 import { useContext, useEffect } from "react";
 import React, { useState } from "react";
 import {
@@ -13,8 +13,10 @@ import {
 import Api from "../api/Api";
 import { AuthContext } from "../contexts/AuthContext";
 import Icon from "../components/Icon";
+import { useNavigate } from "react-router-dom";
 
 export default function CartPage() {
+  let nav = useNavigate()
   let api = new Api();
   let [user,setUser] = useState([])
   useEffect(() => {
@@ -77,75 +79,88 @@ export default function CartPage() {
      console.log(res.data.account.cart)
 
   }
+
+  const applyPromoCode =()=>{
+
+  }
   return (
     <Box className="container">
-      <Heading m="8px">Your Cart</Heading>
-      <Flex direction="row" padding={8} w="100%">
-        <Stack spacing={4} padding={2} w="70%">
-          {items?.map((item) => (
-            <Flex
-              key={item.id}
-              justify="space-between"
-              w="100%"
-              padding={4}
-              border="1px solid black"
-              gap={2}
-            >
-              <Image
-                w="20%"
-                src={item.image}
-                alt={item.name}
-                borderRadius={4}
-              />
-              <VStack w="80%">
-                <Spacer>
-                  <Text fontWeight="bold" fontSize="large" m="8px">{item.name}</Text>
-                  <Text fontStyle="italic" m="8px">${item.price}</Text>
-                  <HStack m="8px">
-                    <IconButton
-                      variant="outline"
-                      disabled={item.quantity==1}
-                      aria-label="subtract"
-                      icon={
-                        <Icon
-                          image="https://cdn-icons-png.flaticon.com/512/5974/5974627.png"
-                          size={16}
-                        />
-                      }
-                      onClick={() => handleQuantityChange(item.id, "subtract")}
-                    />
-                    <Text>{item.quantity}</Text>
-                    <IconButton
-                      variant="outline"
-                      disabled={item.quantity==20}
+    <Heading m="8px">Your Cart</Heading>
+    <Flex direction="row" padding={8} w="100%">
+      <Stack spacing={4} padding={2} w="70%">
+        {items?.map((item) => (
+          <Flex
+            key={item.id}
+            justify="space-between"
+            w="100%"
+            padding={4}
+            border="1px solid black"
+            gap={2}
+          >
+            <Image
+              w="20%"
+              src={item.image}
+              alt={item.name}
+              borderRadius={4}
+            />
+            <VStack w="80%">
+              <Spacer>
+                <Text fontWeight="bold" fontSize="large" m="8px">{item.name}</Text>
+                <Text fontStyle="italic" m="8px">${item.price}</Text>
+                <HStack m="8px">
+                  <IconButton
+                    variant="outline"
+                    disabled={item.quantity==1}
+                    aria-label="subtract"
+                    icon={
+                      <Icon
+                        image="https://cdn-icons-png.flaticon.com/512/5974/5974627.png"
+                        size={16}
+                      />
+                    }
+                    onClick={() => handleQuantityChange(item.id, "subtract")}
+                  />
+                  <Text>{item.quantity}</Text>
+                  <IconButton
+                    variant="outline"
+                    disabled={item.quantity==20}
 
-                      aria-label="add"
-                      icon={
-                        <Icon
-                          image="https://cdn-icons-png.flaticon.com/512/148/148764.png"
-                          size={16}
-                        />
-                      }
-                      onClick={() => handleQuantityChange(item.id, "add")}
-                    />
-                  </HStack>
-                  <Button variant="outline" onClick={()=>handleRemove(item.id)}>Remove</Button>
-                </Spacer>
-              </VStack>
+                    aria-label="add"
+                    icon={
+                      <Icon
+                        image="https://cdn-icons-png.flaticon.com/512/148/148764.png"
+                        size={16}
+                      />
+                    }
+                    onClick={() => handleQuantityChange(item.id, "add")}
+                  />
+                </HStack>
+                <Button variant="outline" onClick={()=>handleRemove(item.id)}>Remove</Button>
+              </Spacer>
+            </VStack>
+          </Flex>
+        ))}
+      </Stack>
+      <VStack w="30%" position="fixed" right="0">
+        <Card w="100%" mt="8px" bg="white">
+          <CardBody>
+            <Flex direction="column" gap={8}>
+              <HStack gap={4}> <Text>Subtotal: ${(subTotal-(subTotal * 0.2)).toFixed(2)}</Text><Text textDecoration="line-through">${subTotal.toFixed(2)}</Text></HStack> 
+            <Text>Total Savings: ${(subTotal * 0.2).toFixed(2)} (20% off)</Text>
+            <Flex align="center" gap={4}>
+              <Input placeholder="Enter promo code" />
+              <Button variant="outline" onClick={applyPromoCode}>Apply</Button>
             </Flex>
-          ))}
-        </Stack>
-        <VStack w="30%" position="fixed" right="0">
-          <Card w="100%" mt="8px" bg="white">
-            <CardBody>
-              <Flex direction="column" gap={8}>
-              <Text>Subtotal: ${subTotal.toFixed(2)}</Text>
-              <Button  variant="outline" padding={6} _hover={{bg:"#202340",color:"white"}}>Checkout</Button>{" "}
-              </Flex>
-            </CardBody>
-          </Card>
-        </VStack>
-      </Flex>
-    </Box>
+            <Button onClick={()=>{
+              nav("/checkout")
+            }}  variant="outline" padding={6} _hover={{bg:"#202340",color:"white"}}>Checkout</Button>
+            </Flex>
+          </CardBody>
+        </Card>
+      </VStack>
+    </Flex>
+  </Box>
+
+
   );
 }

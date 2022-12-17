@@ -29,6 +29,7 @@ import Icon from "../components/Icon";
 import ProductCard from "../components/ProductCard";
 import ProductSlider from "../components/ProductSlider";
 import { AuthContext } from "../contexts/AuthContext";
+import CheckoutPage from "./CheckoutPage";
 import "./styles.css";
 
 export default function HomePage() {
