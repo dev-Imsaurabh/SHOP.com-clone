@@ -8,9 +8,11 @@ import {
     Select, 
     Button, 
     Box,
-    Grid
+    Grid,
+    Flex
   } from  '@chakra-ui/react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./styles.css"
   
   
@@ -27,16 +29,22 @@ import "./styles.css"
     const [cardNumber, setCardNumber] = useState('');
     const [expiry, setExpiry] = useState('');
     const [cvv, setCvv] = useState('');
+    let nav = useNavigate()
   
     const handleSubmit = (event) => {
       event.preventDefault();
       // process the form submission here
+
     }
   
     return (
-        <Grid placeItems="center" className='container' padding={16}>
-              <form  border="1px solid red" onSubmit={handleSubmit}>
-        <FormControl>
+        
+        <Grid  w="100%" placeItems="center" className='container' padding={16}>
+            
+              <form w="100%" onSubmit={handleSubmit}>
+                
+      <Flex  w="500px" direction="column">
+      <FormControl >
           <FormLabel htmlFor="first-name">First Name</FormLabel>
           <Input 
             id="first-name" 
@@ -149,9 +157,10 @@ import "./styles.css"
     />
   </FormControl>
   
-  <Button type="submit" variantColor="teal" mt={4}>
+  <Button onClick={()=>nav("/payment")} type="submit" bg="#202340" color="white" variantColor="teal" mt={4}>
     Proceed to Pay
   </Button>
+      </Flex>
 </form>
         </Grid>
     )

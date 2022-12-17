@@ -7,6 +7,7 @@ import CartPage from "./CartPage";
 import CheckoutPage from "./CheckoutPage";
 import HomePage from "./Hompage";
 import OrdersPage from "./OrdersPage";
+// import OtpPage from "./OtpPage";
 import SeeProductPage from "./SeeProductPage";
 import SigninPage from "./SigninPage";
 import SignupPage from "./SignupPage";
@@ -27,7 +28,7 @@ export default function AllRoutes(){
         <Route path="/orders" element={<PrivateRouter><OrdersPage /></PrivateRouter>}></Route>
         <Route path="/products/:id" element={<AllProductsPage />}></Route>
         <Route path="/:id/:pid" element={<SeeProductPage />}></Route>
-        <Route path="/checkout" element={<CheckoutPage />}></Route>
+        <Route path="/checkout" element={<PrivateRouter><CheckoutPage /></PrivateRouter>}></Route>
 
     </Routes>
 
