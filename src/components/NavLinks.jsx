@@ -5,22 +5,23 @@ import "./cstyles.css"
 
 export default function NavLinks(){
 
-    let navobj = [{
+    let navobj = [
+        {
+            path:"/brands",
+            name:"Exclusive Brands"
+        },{
         path:"/stores",
         name:"Stores"
     },{
-        path:"/shoptravel",
-        name:"SHOP Travel"
+        path:"/deals",
+        name:"Deals"
     },{
         path:"/departments",
         name:"Departments"
     },{
         path:"/shopbuddy",
         name:"Shop Buddy"
-    },{
-        path:"/shoplocal",
-        name:"SHOP Local"
-    }]
+}]
 
     let allNav =navobj.map((el)=><NavLink className={({isActive})=>isActive?"active":"unactive"}
     to={el.path}>{el.name}</NavLink>)

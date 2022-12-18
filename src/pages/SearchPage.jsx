@@ -1,9 +1,10 @@
-import { Box, Button, Flex, Grid, Heading, HStack } from "@chakra-ui/react"
+import { Box, Button, Card, CardBody, Flex, Grid, Heading, HStack, Radio, RadioGroup, Stack, VStack } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import { useSearchParams } from "react-router-dom"
 import Api from "../api/Api"
 import Loader from "../components/Loader"
 import ProductCard from "../components/ProductCard"
+
 
 
 export default function SearchPage(){
@@ -12,8 +13,12 @@ export default function SearchPage(){
     const [loading,setLoading]=useState(false)
     const sort=searchParams.get("sort")
     const search=searchParams.get("q")
+    const ratings = searchParams.get("ratings");
+    const [value, setValue] = useState("")
     
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, [search]);
      useEffect(()=>{
         setLoading(true)
         let getData = async()=>{
@@ -41,6 +46,15 @@ export default function SearchPage(){
                 wpro.sort((a,b)=>b.price-a.price);
   
             }
+            if (ratings) {
+                console.log("yes",ratings)
+               wpro= wpro.filter((el)=>{
+                    if(el.ratings==Number(ratings)){
+                        return el
+                    }
+                })
+              } 
+
             setData(wpro)
 
 
@@ -51,14 +65,14 @@ export default function SearchPage(){
         
         
 
-    },[sort,search])
+    },[sort,search,value])
     console.log(searchParams.get("q"))
 
     return loading?<Loader />:<Box className="container" w="100%" padding={4}>
 
     <Flex gap={4} >
         <Box w="20%">
-
+            <VStack>
             <Heading textAlign="center">Sort by Price</Heading>
             <HStack mt="16px">
                 <Button onClick={()=>{
@@ -70,6 +84,31 @@ export default function SearchPage(){
 
                 }} variant="outline">High to Low</Button>
                 </HStack>
+
+                <Heading fontSize="2xl" textAlign="center">
+              Filter by Ratings
+            </Heading>
+
+            <Card w="100%">
+              <CardBody>
+                  <RadioGroup onChange={(value)=>{
+                    setValue(value)
+                    setSearchParams(`?q=${search}&ratings=${value}`)
+                  }}
+                  value={value}>
+                    <Stack direction="column">
+                      <Radio value="1">1 Star</Radio>
+                      <Radio value="2">2 Star</Radio>
+                      <Radio value="3">3 Star</Radio>
+                      <Radio value="4">4 Star</Radio>
+                      <Radio value="5">5 Star</Radio>
+                    </Stack>
+                  </RadioGroup>
+              </CardBody>
+            </Card>
+
+            </VStack>
+            
 
         </Box>
         

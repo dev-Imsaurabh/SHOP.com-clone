@@ -204,6 +204,17 @@
             "image": "https://img.shop.com/Image/270000/273200/273200/products/1947363526.jpg?plain&size=400x400",
             "quantity": 1,
             "address": "Saurabh kumar, flat no 91 , P and T colony, khajuri  , vns, Varanasi, UTTAR PRADESH, India, 221002, +916393567935"
+          },
+          {
+            "id": 39,
+            "name": "Tênis VR Caminhada Confortável Detalhes Couro Masculino",
+            "price": 139.9,
+            "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis2.jpg",
+            "category": "shoes",
+            "delivery": "+0.99 /2 %",
+            "ratings": 4,
+            "quantity": 5,
+            "address": "Saurabh kumar, flat no 91 , P and T colony, khajuri  , vns, Varanasi, UTTAR PRADESH, India, 221002, +916393567935"
           }
         ]
       },
@@ -504,7 +515,7 @@
           "category": "shoes",
           "delivery": "+0.99 /2 %",
           "price": 30,
-          "ratings": 6,
+          "ratings": 5,
           "image": "https://cdn.shopify.com/s/files/1/0016/0074/9623/products/009240000-11-SS-HL-0135-Black_800x800.jpg?v=1572264270"
         },
         {
@@ -531,7 +542,7 @@
           "category": "shoes",
           "delivery": "+0.99 /2 %",
           "price": 25,
-          "ratings": 7,
+          "ratings": 4,
           "image": "https://cdn.shopify.com/s/files/1/0016/0074/9623/products/009170000-479-SS-MS-0075-Red_800x800.jpg?v=1570688687"
         },
         {
@@ -549,7 +560,7 @@
           "category": "shoes",
           "delivery": "+0.99 /2 %",
           "price": 55,
-          "ratings": 6,
+          "ratings": 5,
           "image": "https://assets.adidas.com/images/h_320,f_auto,q_auto:sensitive,fl_lossy/ef901c7aeac042578eceab9d0159196c_9366/Nizza_x_Disney_Sport_Goofy_Shoes_White_FW0651_01_standard.jpg"
         },
         {
