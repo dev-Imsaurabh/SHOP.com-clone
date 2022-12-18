@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const BASE_URL = process.env.REACT_APP_BASEURL;
+const BASE_URL = process.env.REACT_APP_BASEURL+process.env.REACT_APP_PORT;
 
 export default class Api{
 
@@ -12,6 +12,13 @@ export default class Api{
 
             let res = await axios.get(BASE_URL+process.env.REACT_APP_PRODUCTS+endpoint);
             return res.data.items
+          
+          }
+
+          async getSearchData(){
+
+            let res = await axios.get(BASE_URL+process.env.REACT_APP_PRODUCTS);
+            return res.data
           
           }
 

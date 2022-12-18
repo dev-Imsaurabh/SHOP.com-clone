@@ -7,6 +7,8 @@ import CartPage from "./CartPage";
 import CheckoutPage from "./CheckoutPage";
 import HomePage from "./Hompage";
 import OrdersPage from "./OrdersPage";
+import OtpPage from "./OtpPage";
+import SearchPage from "./SearchPage";
 // import OtpPage from "./OtpPage";
 import SeeProductPage from "./SeeProductPage";
 import SigninPage from "./SigninPage";
@@ -28,7 +30,9 @@ export default function AllRoutes(){
         <Route path="/orders" element={<PrivateRouter><OrdersPage /></PrivateRouter>}></Route>
         <Route path="/products/:id" element={<AllProductsPage />}></Route>
         <Route path="/:id/:pid" element={<SeeProductPage />}></Route>
+        <Route path="/search" element={<SearchPage />}></Route>
         <Route path="/checkout" element={<PrivateRouter><CheckoutPage /></PrivateRouter>}></Route>
+        <Route path="/payment" element={<PrivateRouter><OtpPage /></PrivateRouter>}></Route>
 
     </Routes>
 

@@ -1,9 +1,21 @@
 import { Flex,Menu,MenuButton,Button,MenuList,MenuItem,Input, Box, Grid} from "@chakra-ui/react";
 import {ChevronDownIcon} from "@chakra-ui/icons"
 import Icon from "./Icon";
+import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../contexts/AuthContext";
 
 
 export default function Searchbar(){
+
+  let [search,setSearch]=useState("")
+  let nav=useNavigate()
+  
+  const handleClick=(e)=>{
+
+    nav(process.env.REACT_APP_PRODUCTS+`/${e.target.innerText.toLowerCase()}`)
+
+  }
 
     return <Flex bg="white" w={700} h={50} align="center" gap={4} border="1px solid #202340" borderRadius="50px">
         <Menu>
@@ -11,13 +23,15 @@ export default function Searchbar(){
   All Departments
   </MenuButton>
   <MenuList>
-    <MenuItem>Auto</MenuItem>
+  <MenuItem onClick={handleClick}>Clothes</MenuItem>
+  <MenuItem  onClick={handleClick}>Shoes</MenuItem>
+  <MenuItem  onClick={handleClick}>Beauty</MenuItem>
+  <MenuItem  onClick={handleClick} >Jewelry</MenuItem>
+  <MenuItem>Auto</MenuItem>
     <MenuItem>Baby</MenuItem>
-    <MenuItem>Beauty</MenuItem>
     <MenuItem>Books</MenuItem>
     <MenuItem>Buisness</MenuItem>
     <MenuItem>Cameras</MenuItem>
-    <MenuItem>Clothes</MenuItem>
     <MenuItem>Collectibles</MenuItem>
     <MenuItem>Computers</MenuItem>
     <MenuItem>Crafts</MenuItem>
@@ -27,13 +41,11 @@ export default function Searchbar(){
     <MenuItem>Gifts</MenuItem>
     <MenuItem>Heatlth and Nutrition</MenuItem>
     <MenuItem>Home Store</MenuItem>
-    <MenuItem>Jwelery</MenuItem>
     <MenuItem>Movies</MenuItem>
     <MenuItem>Music</MenuItem>
     <MenuItem>Party Supplies</MenuItem>
     <MenuItem>pet Supplies</MenuItem>
     <MenuItem>Poster</MenuItem>
-    <MenuItem>Shoes</MenuItem>
     <MenuItem>Software</MenuItem>
     <MenuItem>Sports Fan Shop</MenuItem>
     <MenuItem>Sports and Fitness</MenuItem>
@@ -41,8 +53,12 @@ export default function Searchbar(){
    
   </MenuList>
 </Menu>
-<Input variant='unstyled' placeholder='Search ZipShop.com...' />
-<Grid h={50} w={20}  placeItems="center"  bg="#202340" borderRightRadius="50px">
+<Input variant='unstyled' placeholder='Search ZipShop.com...' onChange={(e)=>{
+  setSearch(e.target.value)
+}} />
+<Grid onClick={()=>{
+nav(`/search?q=${search}`)
+}} h={50} w={20}  placeItems="center"  bg="#202340" borderRightRadius="50px">
     <Icon image="https://cdn-icons-png.flaticon.com/512/8915/8915520.png" size={32}></Icon>
 </Grid>
 

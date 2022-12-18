@@ -10,7 +10,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Api from "../api/Api";
 import Footer from "../components/Footer";
 import Layout1 from "../components/Home-page-extra/Layout1";
@@ -32,10 +32,36 @@ import { AuthContext } from "../contexts/AuthContext";
 import CheckoutPage from "./CheckoutPage";
 import "./styles.css";
 
+
 export default function HomePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  let nav = useNavigate()
+
+  let context = useContext(AuthContext);
+  const { isAuth } = context.authState;
+
+  const [d1,setd1]=useState([])
+  const [d2,setd2]=useState([])
+ 
+
+  useEffect(()=>{
+   const perform=async()=>{
+    let api = new Api()
+    
+  setd1(await api.getProductsData(process.env.REACT_APP_BEAUTY))
+   }
+   perform()
+  },[])
+  useEffect(()=>{
+    const perform=async()=>{
+     let api = new Api()
+     
+   setd2(await api.getProductsData(process.env.REACT_APP_CLOTHES))
+    }
+    perform()
+   },[])
 
   return (
     <Box className="container">
@@ -145,7 +171,7 @@ export default function HomePage() {
         </Card>
 
         <div>
-          <Card bg="white">
+          <Card display={!isAuth ? "block" : "none"} bg="white">
             <CardBody>
               <Flex direction="column">
                 <Button
@@ -154,6 +180,9 @@ export default function HomePage() {
                   _hover={{ bg: "gray" }}
                   h="50px"
                   borderRadius="30px"
+                  onClick={()=>{
+                    nav("/signin")
+                  }}
                   colorScheme="gray"
                 >
                   Sign in
@@ -213,6 +242,8 @@ export default function HomePage() {
       <Layout6 />
 
       {/* left slider  Luxury Beauty Gifts from Motives */}
+      {d1.length!=0&&<ProductSlider data={d1} count={4}/>}
+
 
       <Layout7 />
 
@@ -228,6 +259,8 @@ export default function HomePage() {
         Holiday Specials
       </Text>
       <Layout8 />
+      {d2.length!=0&&<ProductSlider data={d2} count={4}/>}
+
       <Layout9 />
 
       {/* Top Sellers */}
