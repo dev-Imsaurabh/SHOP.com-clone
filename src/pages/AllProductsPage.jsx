@@ -12,7 +12,7 @@ export default function AllProductsPage(){
     const [data,setData]=useState([])
     const [searchParams,setSearchParams]=useSearchParams()
     const [loading,setLoading]=useState(false)
-    const [sort,setSort]=useState(searchParams.get("sort"))
+    const sort=searchParams.get("sort")
     console.log(id)
 
     useEffect(()=>{
@@ -35,7 +35,7 @@ export default function AllProductsPage(){
         
         
 
-    },[id,sort])
+    },[id,searchParams])
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -51,11 +51,9 @@ export default function AllProductsPage(){
                 <HStack mt="16px">
                     <Button onClick={()=>{
                         setSearchParams(`?sort=low`)
-                        setSort("low")
                     }} variant="outline">Low to High</Button>
                     <Button  onClick={()=>{
                         setSearchParams(`?sort=high`)
-                        setSort("high")
 
 
                     }} variant="outline">High to Low</Button>
