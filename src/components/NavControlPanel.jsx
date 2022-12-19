@@ -10,7 +10,7 @@ import Icon from "./Icon";
 export default function NavControlPanel(){
   const nav = useNavigate()
   const context = useContext(AuthContext)
-  let {isAuth,token} = context.authState   
+  let {isAuth,token,email} = context.authState   
   let api = new Api()
   let [user,setUser]= useState(null)
 
@@ -34,7 +34,7 @@ export default function NavControlPanel(){
 
     return <Flex align="center"  justify="end">
       <Button
-       display={token==1?"block":"none"}
+       display={email=="admin@gmail.com"?"block":"none"}
        size="md"
        height="48px"
        width="150px"

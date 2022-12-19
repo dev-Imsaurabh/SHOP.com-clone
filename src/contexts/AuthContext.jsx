@@ -7,6 +7,7 @@ export default function AuthContextProvider({children}){
     const[token ,setToken]=useState(null)
     const[totalAmt,setTotalAmt]=useState(null)
     const[userAddress,setUserAddress]=useState("")
+    const [email,setAuthEmail]=useState(null)
     const signIn=()=>{
         setAuth(true)
     }
@@ -17,9 +18,9 @@ export default function AuthContextProvider({children}){
     }
 
     let authState = {
-        isAuth,token,totalAmt,userAddress
+        isAuth,token,totalAmt,userAddress,email
     }
 
-    return <AuthContext.Provider value={{authState,signIn,signOut,setToken,setTotalAmt,setUserAddress}}>{children}</AuthContext.Provider>
+    return <AuthContext.Provider value={{authState,signIn,signOut,setToken,setTotalAmt,setUserAddress,setAuthEmail}}>{children}</AuthContext.Provider>
 
 }
