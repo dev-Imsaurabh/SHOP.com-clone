@@ -252,6 +252,38 @@
         ]
       },
       "id": 2
+    },
+    {
+      "name": "Saurabh kumar",
+      "email": "saurabh@gamilcom",
+      "password": "saurabh@5740",
+      "account": {
+        "cart": [],
+        "orders": []
+      },
+      "id": 3
+    },
+    {
+      "name": "Saurabh kumar",
+      "email": "saurabh123@gmail.com",
+      "password": "Saurabh@123",
+      "account": {
+        "cart": [],
+        "orders": [
+          {
+            "id": 35,
+            "name": "Tênis de Caminhada Leve Confortável",
+            "price": 179.9,
+            "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg",
+            "category": "shoes",
+            "delivery": "+0.99 /2 %",
+            "ratings": 4,
+            "quantity": 3,
+            "address": "Saurabh kumar, flat no 91 , P and T colony, khajuri  , vns, Varanasi, UTTAR PRADESH, India, 221002, +916393567935"
+          }
+        ]
+      },
+      "id": 4
     }
   ],
   "products": [
@@ -1762,6 +1794,10 @@
     },
     {
       "id": "electronics",
+      "items": []
+    },
+    {
+      "id": "books",
       "items": []
     }
   ]
