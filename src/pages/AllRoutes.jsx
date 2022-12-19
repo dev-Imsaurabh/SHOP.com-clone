@@ -1,6 +1,7 @@
 import {Route,Routes} from "react-router-dom";
 import AccountRoute from "../contexts/AccountRoute";
 import PrivateRouter from "../contexts/PrivateRouter";
+import ProtectAdmin from "../contexts/ProtectAdmin";
 import AccountPage from "./AccountPage";
 import AdminPanel from "./AdminPanel";
 import AllProductsPage from "./AllProductsPage";
@@ -44,7 +45,7 @@ export default function AllRoutes(){
         <Route path="/departments" element={<DepartmentPage />}></Route>
         <Route path="/shopbuddy" element={<ShopBuddyPage />}></Route>
         <Route path="/brands" element={<BrandsPage />}></Route>
-        <Route path="/admin" element={<AdminPanel />}></Route>
+        <Route path="/admin" element={<ProtectAdmin><AdminPanel /></ProtectAdmin>}></Route>
 
     </Routes>
 
