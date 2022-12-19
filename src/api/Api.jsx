@@ -44,4 +44,13 @@ export default class Api{
 
     }
 
+    async patchData1(data,endpoint){
+      let res = await axios(BASE_URL+endpoint,{
+        method: 'patch',
+        data:data
+      })
+      return res
+
+    }
+
 }
