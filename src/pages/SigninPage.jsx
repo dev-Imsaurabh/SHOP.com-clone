@@ -29,7 +29,7 @@ const [error, setError] = useState(false);
 const [ermsg,setErMsg]=useState("")
 let context=useContext(AuthContext)
 let {isAuth,token}=context.authState
-let {signIn,setToken}=context
+let {signIn,setToken,setAuthEmail}=context
 
 
 
@@ -54,6 +54,7 @@ const handleSigin=async()=>{
             if(el.email==email&&el.password==password){
                 exist=1
                 setToken(el.id)
+                setAuthEmail(el.email)
 
             }
         });

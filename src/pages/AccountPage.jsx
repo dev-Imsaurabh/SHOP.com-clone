@@ -84,7 +84,10 @@ let context = useContext(AuthContext)
     <Box width="100%" className="container">
       <Flex w="100%" justify="space-between" padding="8px 32px">
         <Heading>Account</Heading>
-        <Button variant="outline" onClick={()=>context.signOut()}>Sign out</Button>
+        <Button variant="outline" onClick={()=>{
+          context.signOut()
+          context.setAuthEmail(null)
+        }}>Sign out</Button>
       </Flex>
       <Text padding={8}>
         Life is complicated-why should your shopping be? We’ve made it easy to

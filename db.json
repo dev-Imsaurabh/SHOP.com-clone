@@ -295,6 +295,16 @@
         ]
       },
       "id": 4
+    },
+    {
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "Saurabh@5740",
+      "account": {
+        "cart": [],
+        "orders": []
+      },
+      "id": 5
     }
   ],
   "products": [

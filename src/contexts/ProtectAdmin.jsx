@@ -5,9 +5,9 @@ import { AuthContext } from "./AuthContext";
 export default function ProtectAdmin({children}){
 
     let context = useContext(AuthContext)
-    let {token} = context.authState
+    let {email} = context.authState
 
-    if(token==1){
+    if(email=="admin@gmail.com"){
         return children
     }
     return <HomePage />
