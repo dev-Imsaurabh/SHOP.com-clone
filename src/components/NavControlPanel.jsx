@@ -33,6 +33,29 @@ export default function NavControlPanel(){
   console.log(user)
 
     return <Flex align="center"  justify="end">
+      <Button
+       display={token==1?"block":"none"}
+       size="md"
+       height="48px"
+       width="150px"
+       _hover={{ bg: "transparent",color:"teal"}}
+
+       leftIcon={
+         <Icon
+           image="https://cdn-icons-png.flaticon.com/128/7542/7542245.png"
+           size={24}
+         />
+       }
+       color="black"
+       bg="#f5f7fd"
+       onClick={()=>{
+         nav("/admin")
+       }}
+       border="0"
+       borderColor="green.500"
+     >
+     Admin
+     </Button>
  <Button
        
           size="md"

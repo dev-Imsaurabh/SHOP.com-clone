@@ -225,7 +225,18 @@
       "email": "sau4478@gmail.com",
       "password": "Saurabh@5740",
       "account": {
-        "cart": [],
+        "cart": [
+          {
+            "id": 3,
+            "name": "Nike Air Zoom Pegasus 37",
+            "category": "shoes",
+            "delivery": "+0.99 /2 %",
+            "price": 120,
+            "ratings": 3,
+            "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-33b0a0a5-c171-46cc-ad20-04a768703e47/air-zoom-pegasus-37-womens-running-shoe-Jl0bDf.jpg",
+            "quantity": 1
+          }
+        ],
         "orders": [
           {
             "id": 40,
