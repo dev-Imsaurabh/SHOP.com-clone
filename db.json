@@ -219,6 +219,39 @@
         ]
       },
       "id": 1
+    },
+    {
+      "name": "Saurabh kumar",
+      "email": "sau4478@gmail.com",
+      "password": "Saurabh@5740",
+      "account": {
+        "cart": [],
+        "orders": [
+          {
+            "id": 40,
+            "name": "Tênis de Caminhada Leve e muito Confortável Confortável",
+            "price": 179.9,
+            "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg",
+            "category": "shoes",
+            "delivery": "+0.99 /2 %",
+            "ratings": 4,
+            "quantity": 3,
+            "address": "Saurabh kumar, flat no 91 , P and T colony, khajuri  , vns, Varanasi, UTTAR PRADESH, India, 221002, +916393567935"
+          },
+          {
+            "id": 2,
+            "name": "CBUK Men's All-Star Printed Half-Zip Jacket",
+            "category": "clothes",
+            "price": 65,
+            "ratings": 3,
+            "delivery": "+0.99 /2 %",
+            "image": "https://img.shop.com/Image/290000/291600/291696/products/1940910031.jpg?plain&size=400x400",
+            "quantity": 2,
+            "address": "Saurabh kumar, flat no 91 , P and T colony, khajuri  , vns, Varanasi, UTTAR PRADESH, India, 221002, +916393567935"
+          }
+        ]
+      },
+      "id": 2
     }
   ],
   "products": [
@@ -227,11 +260,11 @@
       "items": [
         {
           "id": 1,
-          "image": "https://img.shop.com/Image/280000/282000/282022/products/1954593819.jpg?plain&size=600x600",
-          "price": 80,
+          "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg",
+          "price": 179.9,
           "delivery": "+0.99 /2 %",
-          "name": "GABRIELLA - Simulated Diamond Tennis Necklace",
-          "ratings": 4,
+          "name": "Tennis de Caminhada Leve e muito Confortável Confortável",
+          "ratings": 2,
           "category": "jewelry"
         },
         {
@@ -327,7 +360,7 @@
           "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg",
           "category": "shoes",
           "delivery": "+0.99 /2 %",
-          "ratings": 4
+          "ratings": 3
         },
         {
           "id": 39,
@@ -336,7 +369,7 @@
           "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis2.jpg",
           "category": "shoes",
           "delivery": "+0.99 /2 %",
-          "ratings": 4
+          "ratings": 5
         },
         {
           "id": 38,
@@ -1726,6 +1759,10 @@
           "image": "https://img.shop.com/Image/260000/263100/263143/products/1569553213.jpg?plain&size=400x400"
         }
       ]
+    },
+    {
+      "id": "electronics",
+      "items": []
     }
   ]
 }
