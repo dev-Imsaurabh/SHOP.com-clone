@@ -26,13 +26,13 @@ export default function Navbar({ navList }) {
 
   return (
     <Box className="navbar">
-      <Flex align="center" gap={40}>
+      <Flex align={{base:"start",lg:"center"}} gap={{base:4,lg:40}} direction={{base:"column",lg:"row"}} >
         <Image _hover={{cursor:"pointer"}} onClick={()=>{
             nav("/")
         }} src={logo} width={120} ml={8}></Image>
         <Searchbar />
       </Flex>
-      <Flex gap={20} justify="space-between">
+      <Flex direction={{base:"column-reverse",lg:"row"}} gap={{base:2,lg:20}} justify={{base:"space-around",lg:"space-between"}}>
         <SideBar />
         <NavLinks/>
         <NavControlPanel/>

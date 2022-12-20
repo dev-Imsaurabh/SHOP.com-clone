@@ -3,7 +3,7 @@ import CircularCard from "./CircularCard";
 
 export default function Layout4(){
 
-    return <Flex m="32px"marginTop="0px" justifyContent="center" align="center" padding="32px" gap={4} bg="white">
+    return <Flex m="32px"marginTop="0px" justifyContent="center" align="center" padding="32px" gap={4} bg="white" direction={{base:"column",lg:"row"}}>
 
         <CircularCard image="https://img.shop.com/Image/240000/243400/243406/products/1947692115.jpg?plain&size=400x400" cat="ELECTRONIC GIFTS" />
         <CircularCard image="https://img.shop.com/Image/240000/243300/243380/products/1869987733.jpg?plain&size=300x300" cat="GIFTS UNDER $25" />

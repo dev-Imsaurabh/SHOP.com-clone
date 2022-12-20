@@ -22,7 +22,7 @@ export default function Layout11(){
    perform()
   },[])
 
-    return <Flex m="32px" mt="0px"  gap={10} padding="16px 32px" bg="white">
+    return <Flex m="32px" mt="0px"  gap={10} padding="16px 32px" bg="white" direction={{base:"column",lg:"row"}}>
 
         <Image src="https://img.shop.com/Image/homepage/layered-usa-104750-holiday-collection-banner-bgsq1668531326212.jpg" w="400px" h="400px"></Image>
         <Box w="70%">

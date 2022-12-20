@@ -26,7 +26,7 @@ export default function NavLinks(){
     let allNav =navobj.map((el)=><NavLink className={({isActive})=>isActive?"active":"unactive"}
     to={el.path}>{el.name}</NavLink>)
 
-    return <Flex align="center" gap={8}>
+    return <Flex justify={{base:"center",lg:"space-around"} } fontSize={{base:"12px",lg:"16px"}}  align="center" gap={{base:4,lg:8}}>
 
         {allNav}
 

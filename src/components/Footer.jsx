@@ -9,21 +9,21 @@ export default function Footer(){
 
     return <Box>
 
-        <Flex bg="#202340" padding="8px 16px">
+        <Flex bg="#202340"  padding="8px 16px" direction={{base:"column",lg:"row"}}>
 
-            <Flex w="50%" justify="start" align="baseline" gap={4}>
+            <Flex w={{base:"100%",lg:"50%"}} justify="start" align="baseline" gap={4} direction={{base:"column",lg:"row"}}>
 
                 <Text color="white">Get Email Deals & Earn Cashback</Text>
-                <Flex h="35px" w="300px" bg="white">
+                <Flex h="35px" w="300px"  bg="white" >
                     <Input w="80%" placeholder="Enter email address..." borderWidth="0px" borderRadius="0px"></Input>
                     <Button borderWidth="0px" borderRadius="0px" w="20%"> Sign Up </Button>
                 </Flex>
 
             </Flex>
 
-            <Flex w="50%" justify="end" align="baseline" gap={4}>
-            <Text color="white">Link To This Page & Tell All Your Friends!</Text>
-            <Button  h="30px" borderWidth="1px" rightIcon={<Icon image="https://cdn-icons-png.flaticon.com/512/126/126498.png" size={12}></Icon>} borderRadius="30px" w="20%">Copy Link</Button>
+            <Flex w={{base:"100%",lg:"50%"}} justify="end"  direction={{base:"column",lg:"row"}}align="baseline" gap={4}>
+            <Text mt={{base:"16px"}} color="white">Link To This Page & Tell All Your Friends!</Text>
+            <Button  h="30px" borderWidth="1px" rightIcon={<Icon image="https://cdn-icons-png.flaticon.com/512/126/126498.png" size={12}></Icon>} borderRadius="30px" w={{base:"100%",lg:"20%"}}>Copy Link</Button>
 
             </Flex>
 
@@ -31,21 +31,21 @@ export default function Footer(){
 
         </Flex>
         <Divider />
-        <Flex bg="#202340" padding={1}>
-            <Flex w="70%" gap={2} align="center" >
-                <Text fontSize="small" color="white" padding="4px" borderRight="1px solid white">About Us</Text>
-                <Text fontSize="small" color="white" padding="2px" borderRight="1px solid white">Help</Text>
-                <Text fontSize="small" color="white" padding="2px" borderRight="1px solid white">Accessbility Statement</Text>
-                <Text fontSize="small" color="white" padding="2px" borderRight="1px solid white">Contact Us</Text>
-                <Text fontSize="small" color="white" padding="2px" borderRight="1px solid white">Partner With Us</Text>
-                <Text fontSize="small" color="white" padding="2px" borderRight="1px solid white">Services</Text>
-                <Text fontSize="small" color="white" padding="2px" borderRight="1px solid white">Country/Region</Text>
-                <Text fontSize="small" color="white" padding="2px" borderRight="1px solid white">Connect</Text>
+        <Flex bg="#202340" padding={1} direction={{base:"column",lg:"row"}}>
+            <Flex w={{base:"100%",lg:"70%"}} gap={2} align="center" direction={{base:"column",lg:"row"}}>
+                <Text fontSize="small" color="white" padding="4px" borderRight={{lg:"1px solid white"}}>About Us</Text>
+                <Text fontSize="small" color="white" padding="2px" borderRight={{lg:"1px solid white"}}>Help</Text>
+                <Text fontSize="small" color="white" padding="2px" borderRight={{lg:"1px solid white"}}>Accessbility Statement</Text>
+                <Text fontSize="small" color="white" padding="2px" borderRight={{lg:"1px solid white"}}>Contact Us</Text>
+                <Text fontSize="small" color="white" padding="2px" borderRight={{lg:"1px solid white"}}>Partner With Us</Text>
+                <Text fontSize="small" color="white" padding="2px" borderRight={{lg:"1px solid white"}}>Services</Text>
+                <Text fontSize="small" color="white" padding="2px" borderRight={{lg:"1px solid white"}}>Country/Region</Text>
+                <Text fontSize="small" color="white" padding="2px" borderRight={{lg:"1px solid white"}}>Connect</Text>
                 <Text fontSize="small" color="white" padding="2px">Own You Own SHOP Site</Text>
 
             </Flex>
 
-            <Flex  w="30%" justify="end" gap={4} align="center">
+            <Flex  w={{base:"100%",lg:"30%"}} justify={{base:"space-around",lg:"end"}} gap={4} align="center">
 
                 <Icon image="https://cdn-icons-png.flaticon.com/512/552/552486.png" size={48}></Icon>
                 <Icon image="https://cdn-icons-png.flaticon.com/512/3670/3670124.png"  size={48}></Icon>
@@ -67,7 +67,7 @@ export default function Footer(){
     <Link  style={{textDecoration:"underline",padding:"2px",fontSize:"12px"}}>Shipping Information</Link>
 </HStack>
 <Divider />
-<Flex justify="center" align="center" gap={4} marginTop="30px">
+<Flex justify="center" align="center" gap={4} marginTop="30px" direction={{base:"column",lg:"row"}}>
     <Image w="100px" h="100px" src="https://img.shop.com/Image/images/ir/Shop-ranks-19-in-newsweek-circle.png"></Image>
     <Image w="100px" h="100px" src="https://img.shop.com/Image/images/ir/DC360_2022_rank_10_top_500_primary_merch_category.png"></Image>
     <Image w="100px" h="100px" src="https://img.shop.com/Image/images/ir/DC360_2022_rank_55_top_100.png"></Image>
@@ -79,7 +79,7 @@ export default function Footer(){
    
 </Flex>
 
-<Flex justify="center" align="center" mt="30px">
+<Flex justify="center" align="center" mt="30px" direction={{base:"column",lg:"row"}}>
 <Image w="180px" h="100px" src={footer}></Image>
 
 </Flex>

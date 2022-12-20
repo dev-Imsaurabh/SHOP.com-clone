@@ -225,18 +225,7 @@
       "email": "sau4478@gmail.com",
       "password": "Saurabh@5740",
       "account": {
-        "cart": [
-          {
-            "id": 3,
-            "name": "Nike Air Zoom Pegasus 37",
-            "category": "shoes",
-            "delivery": "+0.99 /2 %",
-            "price": 120,
-            "ratings": 3,
-            "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-33b0a0a5-c171-46cc-ad20-04a768703e47/air-zoom-pegasus-37-womens-running-shoe-Jl0bDf.jpg",
-            "quantity": 1
-          }
-        ],
+        "cart": [],
         "orders": [
           {
             "id": 40,
@@ -258,6 +247,50 @@
             "delivery": "+0.99 /2 %",
             "image": "https://img.shop.com/Image/290000/291600/291696/products/1940910031.jpg?plain&size=400x400",
             "quantity": 2,
+            "address": "Saurabh kumar, flat no 91 , P and T colony, khajuri  , vns, Varanasi, UTTAR PRADESH, India, 221002, +916393567935"
+          },
+          {
+            "id": 3,
+            "name": "Nike Air Zoom Pegasus 37",
+            "category": "shoes",
+            "delivery": "+0.99 /2 %",
+            "price": 120,
+            "ratings": 3,
+            "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-33b0a0a5-c171-46cc-ad20-04a768703e47/air-zoom-pegasus-37-womens-running-shoe-Jl0bDf.jpg",
+            "quantity": 3,
+            "address": "Saurabh kumar, flat no 91 , P and T colony, khajuri  , vns, Varanasi, UTTAR PRADESH, India, 221002, +916393567935"
+          },
+          {
+            "id": 2,
+            "name": "CBUK Men's All-Star Printed Half-Zip Jacket",
+            "category": "clothes",
+            "price": 65,
+            "ratings": 3,
+            "delivery": "+0.99 /2 %",
+            "image": "https://img.shop.com/Image/290000/291600/291696/products/1940910031.jpg?plain&size=400x400",
+            "quantity": 1,
+            "address": "Saurabh kumar, flat no 91 , P and T colony, khajuri  , vns, Varanasi, UTTAR PRADESH, India, 221002, +916393567935"
+          },
+          {
+            "id": 40,
+            "name": "Tênis de Caminhada Leve e muito Confortável Confortável",
+            "price": 179.61,
+            "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg",
+            "category": "shoes",
+            "delivery": "+0.99 /2 %",
+            "ratings": 3,
+            "quantity": 5,
+            "address": "Saurabh kumar, flat no 91 , P and T colony, khajuri  , vns, Varanasi, UTTAR PRADESH, India, 221002, +916393567935"
+          },
+          {
+            "id": 9,
+            "name": "Cutter & Buck Men's Shoreline Color Block Jacket",
+            "category": "clothes",
+            "price": 100,
+            "ratings": 3,
+            "delivery": "+0.99 /2 %",
+            "image": "https://img.shop.com/Image/290000/291600/291696/products/1940910028.jpg?plain&size=400x400",
+            "quantity": 3,
             "address": "Saurabh kumar, flat no 91 , P and T colony, khajuri  , vns, Varanasi, UTTAR PRADESH, India, 221002, +916393567935"
           }
         ]
@@ -301,7 +334,18 @@
       "email": "admin@gmail.com",
       "password": "Saurabh@5740",
       "account": {
-        "cart": [],
+        "cart": [
+          {
+            "id": 4,
+            "name": "Nike Joyride Run Flyknit",
+            "category": "shoes",
+            "delivery": "+0.99 /2 %",
+            "price": 180,
+            "ratings": 3,
+            "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/99a7d3cb-e40c-4474-91c2-0f2e6d231fd2/joyride-run-flyknit-womens-running-shoe-HcfnJd.jpg",
+            "quantity": 1
+          }
+        ],
         "orders": []
       },
       "id": 5
@@ -408,7 +452,7 @@
       "items": [
         {
           "id": 40,
-          "name": "Tênis de Caminhada Leve e muito Confortável Confortável",
+          "name": "adidas",
           "price": 179.9,
           "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg",
           "category": "shoes",
@@ -435,12 +479,12 @@
         },
         {
           "id": 37,
-          "name": "Tênis VR Caminhada Confortável Detalhes Couro Masculino",
-          "price": 139.9,
+          "name": "nike shoes",
+          "price": 88.99,
           "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis2.jpg",
           "category": "shoes",
           "delivery": "+0.99 /2 %",
-          "ratings": 3
+          "ratings": 4
         },
         {
           "id": 36,
@@ -1820,6 +1864,20 @@
     {
       "id": "books",
       "items": []
+    },
+    {
+      "id": "fruits",
+      "items": [
+        {
+          "name": "Apple",
+          "image": "https://images.pexels.com/photos/19090/pexels-photo.jpg?cs=srgb&dl=pexels-web-donut-19090.jpg&fm=jpg",
+          "price": 12,
+          "delivery": "+0.99 /2 %",
+          "category": "fruits",
+          "ratings": 3,
+          "id": 1671506457786.5837
+        }
+      ]
     }
   ]
 }
