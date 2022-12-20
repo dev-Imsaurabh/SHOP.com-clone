@@ -32,7 +32,7 @@ export default function NavControlPanel(){
 
   console.log(user)
 
-    return <Flex align="center"  justify="end">
+    return <Flex align="center"  justify={{base:"space-around",lg:"end"}}>
       <Button
        display={email=="admin@gmail.com"?"block":"none"}
        size="md"

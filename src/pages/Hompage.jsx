@@ -67,7 +67,7 @@ export default function HomePage() {
     <Box className="container">
       {/* <ProductCard image={"https://img.shop.com/Image/240000/243300/243380/products/1942133519.jpg?plain&size=600x600"} name="Motives® X Amber Essential Collection" price={80.00} delivery=" 1.60 / 2%" rating={5}/> */}
 
-      <Flex justify="center" align="center" gap={2} mb={8} padding={2}>
+      <Flex justify="center" direction={{base:"column",lg:"row"}} align="center" gap={2} mb={8} padding={2}>
         <Text fontSize="3xl" color="gray">
           $50,009,502
         </Text>
@@ -99,7 +99,7 @@ export default function HomePage() {
       ></Image>
 
       <Grid
-        templateColumns="repeat(4,1fr)"
+        templateColumns={{base:"repeat(1,1fr)",lg:"repeat(4,1fr)"}}
         templateRows="repeat(1,500px)"
         padding="8px"
         gap={10}

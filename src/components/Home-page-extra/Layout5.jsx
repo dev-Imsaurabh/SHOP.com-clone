@@ -3,7 +3,7 @@ import ImageCard from "./ImageCard";
 
 export default function Layout5(){
 
-    return <Grid templateColumns="repeat(4,1fr)" m="32px" padding="16px 16px" bg="white" mt="30px" gap={20}>
+    return <Grid templateColumns={{base:"repeat(1,1fr)" ,lg:"repeat(4,1fr)" }} m="32px" padding="16px 16px" bg="white" mt="30px" gap={20}>
 
         <ImageCard image="https://img.shop.com/Image/homepage/shop-usa-100086-gift-wrapping-media1669930199153.jpg" cbtn={false} />
         <ImageCard image="https://img.shop.com/Image/homepage/shop-usa-105054-Holiday-egift-banners-social-media-assets-media1665596337501.jpg"  cbtn={false}/>

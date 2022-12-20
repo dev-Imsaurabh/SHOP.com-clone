@@ -17,7 +17,7 @@ export default function Searchbar(){
 
   }
 
-    return <Flex bg="white" w={700} h={50} align="center" gap={4} border="1px solid #202340" borderRadius="50px">
+    return <Flex m="4px" bg="white" w={{base:"90%",lg:700}} h={50} align="center" gap={4} border="1px solid #202340" borderRadius="50px">
         <Menu>
   <MenuButton  borderRightRadius={0} w={300} borderLeftRadius="50px" bg="white" height="100%" borderRight="1px solid #202340" as={Button} rightIcon={<ChevronDownIcon />}>
   All Departments

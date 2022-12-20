@@ -3,7 +3,7 @@ import RectangularCard from "./RectangularCard";
 
 export default function Layout10(){
 
-    return <Flex m="32px"marginTop="0px" justifyContent="center" align="center" padding="32px" gap={4} bg="white">
+    return <Flex m="32px"marginTop="0px" justifyContent="center" align="center" padding="32px" gap={4} bg="white" direction={{base:"column",lg:"row"}} >
 
         <RectangularCard image="https://img.shop.com/Image/homepage/healthnutirtion1572880380738.jpg" cat="HEALTH & NUTRITION" />
         <RectangularCard image="https://img.shop.com/Image/homepage/lipstick1572880828301.jpg" cat="BEAUTY" />
