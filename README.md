@@ -9,9 +9,9 @@ Step-1- Clone the repo.
 
 Step-2- Open the terminal navigate to project directory using $cd command. (eg. $cd deep-scarecrow-1437)
 
-Step-3- Install node modules using < $npm intall > commands (dont use those angle brackets)
+Step-3- Install node_modules using < $npm install > commands (dont use those angle brackets)
 
-Step-4- Start < json server --- > json-server --watch db.json --port 3004 > (port should 3004 always: mandetory) (dont use those angle brackets)
+Step-4- Start json-server < json-server --watch db.json --port 3004 > (port should 3004 always: mandetory) (dont use those angle brackets)
 
 Step-5- Start the server by typing command in terminal < $npm start > (dont use those angle brackets)
 
