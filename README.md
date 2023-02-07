@@ -16,6 +16,10 @@ Step-4- Start json-server < json-server --watch db.json --port 3004 > (port shou
 
 Step-5- Start the server by typing command in terminal < $npm start > (dont use those angle brackets)
 
+# Tech stack
+ - `React.js`
+ - `/json-server`
+
 # Features
  - `Login/Signup using context api`
  - `Filtering and Sorting options`
