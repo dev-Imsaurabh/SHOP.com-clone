@@ -2,7 +2,7 @@
 
 This is the clone of SHOP.COM renamed as ZipShop.com.
 SHOP.COM is a new kind of shopping comparison site that offers the most comprehensive shopping experience on the web. Our shopping experts have drawn on their industry experience and insider connections to bring you the best collection of the stores you can't live without, and the brands and products you love - all in one place.
-<center><img src="https://github.com/dev-Imsaurabh/image-hosting-repo/blob/master/Shop-Com/s1.png?raw=true" width="90%"></img></center>
+<center><img src="https://drive.google.com/uc?export=view&id=1d35HiGCAcoAW-XqQPWTaibyjZl1Ea3Xz" width="90%"></img></center>
 
 <h1>Configuration:-</h1>
 
