@@ -18,7 +18,7 @@ Step-5- Start the server by typing command in terminal < $npm start > (dont use 
 
 # Tech stack
  - `React.js`
- - `/json-server`
+ - `json-server`
 
 # Features
  - `Login/Signup using context api`
