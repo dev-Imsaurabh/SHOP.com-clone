@@ -16,6 +16,15 @@ Step-4- Start json-server < json-server --watch db.json --port 3004 > (port shou
 
 Step-5- Start the server by typing command in terminal < $npm start > (dont use those angle brackets)
 
+# Features
+ - `Login/Signup using context api`
+ - `Filtering and Sorting options`
+ - `Search Page`
+ - `Cart Page`
+ - `Orders using OTP`
+ - `Admin Panel`
+ - `Fully Responsive` 
+
 <h1>Demo:-</h1>
 
 Link of working project :-> https://shop-com-nine.vercel.app/
